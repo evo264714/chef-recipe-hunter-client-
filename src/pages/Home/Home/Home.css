@@ -11,9 +11,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background-color: rgba(255, 255, 255, 0.7); */
     padding: 30px;
     text-align: center;
+    /* background: linear-gradient(to right,#7da5aa,#385253) */
   }
   
   .banner-text h1 {

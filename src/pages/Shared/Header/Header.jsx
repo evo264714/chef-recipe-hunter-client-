@@ -12,7 +12,7 @@ const Header = () => {
             <h2 className='text-7xl font-bold text-white'>Chefs Table</h2>
 
             <nav>
-                <Link className='text-white	font-medium mr-5' to="/home">Home</Link>
+                <Link className='text-white	font-medium mr-5' to="/">Home</Link>
                 <Link className='text-white	font-medium mr-5' to="/blog">Blog</Link>
                 <Link className='text-white	font-medium mr-5' to="/">About</Link>
             </nav>
