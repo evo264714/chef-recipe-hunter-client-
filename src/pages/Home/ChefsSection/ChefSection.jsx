@@ -13,7 +13,7 @@ const ChefSection = () => {
 
     return (
         <div>
-            <h2 className='text-black text-4xl font-bold mt-10'>Check out some of our world class chef's recipes.</h2>
+            <h2 className='text-white text-4xl font-bold mt-10'>Check out some of our world class chef's recipes.</h2>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-x-16'>
                 {
