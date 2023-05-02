@@ -1,0 +1,27 @@
+.banner {
+    position: relative;
+    height: 500px; 
+    background-image: url(../../../assets/logo.jpg.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .banner-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text p {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }

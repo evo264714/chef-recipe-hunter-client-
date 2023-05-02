@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 
 const Footer = () => {
     const footerStyle ={
@@ -9,15 +8,7 @@ const Footer = () => {
         paddingBottom: '2rem',
     }
     return (
-        <footer className="mt-5" style={footerStyle} >
-      <Container>
-        <Row>
-          <Col className="text-center">
-            <p>&copy; 2023 Chefs Table All Rights Reserved.</p>
-          </Col>
-        </Row>
-      </Container>
-    </footer>
+        <></>
     );
 };
 

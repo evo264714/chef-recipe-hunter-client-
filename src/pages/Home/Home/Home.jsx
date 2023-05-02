@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from '../../../assets/logo.jpg.jpg'
+import './Home.css'
 
 const Home = () => {
-    const logoImg = {
-        height: '600px',
-        width: '600px',
-        padding: '20px',
-    }
+
     return (
-        <div className='d-flex justify-content-center'>
-            <img className='rounded' style={logoImg} src={logo} alt="" />
-        </div>
+        <section className="banner mb-10">
+            <div className="banner-text">
+                <h1 className='text-black font-bold'>Welcome to Chef's Kitchen</h1>
+                <p className='text-black font-bold'>Discover the art of cooking with our delicious recipes and expert tips.</p>
+            </div>
+        </section>
     );
 };
 

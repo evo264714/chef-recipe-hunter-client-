@@ -8,13 +8,13 @@ const Header = () => {
         color: 'white',
     }
     return (
-        <div className='d-flex align-items-center justify-content-around p-4' style={headerStyle}>
-            <h2 className=''>Chefs Table</h2>
+        <div className='w-full flex items-center justify-around p-6' style={headerStyle}>
+            <h2 className='text-7xl font-bold text-white'>Chefs Table</h2>
 
             <nav>
-                <Link className='text-decoration-none text-white me-4' to="/home">Home</Link>
-                <Link className='text-decoration-none text-white me-4' to="/blog">Blog</Link>
-                <Link className='text-decoration-none text-white me-4' to="/">About</Link>
+                <Link className='text-white	font-medium mr-5' to="/home">Home</Link>
+                <Link className='text-white	font-medium mr-5' to="/blog">Blog</Link>
+                <Link className='text-white	font-medium mr-5' to="/">About</Link>
             </nav>
             <div>
                <Link> <FaCuttlefish /></Link>
