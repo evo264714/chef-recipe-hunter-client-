@@ -10,7 +10,7 @@ const Chef = ({ chef }) => {
     const { chef_name, chef_picture, years_of_experience, num_recipes, likes } = chef;
     return (
 
-        <div className="card w-96 bg-base-100 shadow-xl mb-10 mt-10 text-white" style={{background: 'linear-gradient(to right,#7da5aa,#385253)'}}>
+        <div className="card w-96 bg-base-100 shadow-xl mb-10 mt-10 text-white mx-auto" style={{background: 'linear-gradient(to right,#7da5aa,#385253)'}}>
             <figure><img className='h-64 w-full' src={chef_picture} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="text-2xl text-center font-bold"> {chef_name}</h2>

@@ -13,9 +13,10 @@ const ChefSection = () => {
 
     return (
         <div>
-            <h2 className='text-white text-4xl font-bold mt-10'>Check out some of our world class chef's recipes.</h2>
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-x-16'>
+           
+           <h2 className='py-6 text-center text-black text-4xl font-bold bg-slate-400'>Check out some of our world class chef's recipes.</h2>
+            <div className='grid md:grid-cols-2 lg:grid-cols-2 bg-slate-400'>
+                
                 {
                     chefs.map(chef => <Chef
                         key={chef.id}
