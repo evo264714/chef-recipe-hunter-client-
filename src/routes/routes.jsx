@@ -7,6 +7,8 @@ import Blogs from "../pages/Blogs/Blogs";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
+import Recipe from "../pages/Recipe/Recipe";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
    
@@ -24,9 +26,10 @@ const router = createBrowserRouter([
             },
             {
                 path: '/recipes/:id',
-                element: <RecipeDetails></RecipeDetails>,
+                element: <PrivateRoute><RecipeDetails></RecipeDetails></PrivateRoute>,
                 loader: ({params}) => recipeData(params.id)
             },
+            
             {
                 path: '/login',
                 element: <Login></Login>
