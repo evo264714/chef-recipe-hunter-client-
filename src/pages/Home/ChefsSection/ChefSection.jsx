@@ -21,10 +21,6 @@ const ChefSection = () => {
                         key={chef.id}
                         chef={chef}
                     >
-
-
-
-
                     </Chef>)
 
 

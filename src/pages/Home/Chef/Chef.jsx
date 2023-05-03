@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Chef = ({ chef }) => {
+    const navigate = useNavigate()
+    const handleViewRecipes = (id) =>{
+        navigate(`/recipes/${id}`);
+    }
 
     const { chef_name, chef_picture, years_of_experience, num_recipes, likes } = chef;
     return (
@@ -10,10 +15,10 @@ const Chef = ({ chef }) => {
             <div className="card-body">
                 <h2 className="text-2xl text-center font-bold"> {chef_name}</h2>
                 <p className='text-xl text-center font-medium'>Experience: {years_of_experience}</p>
-                <p className='text-xl text-center font-medium'>Recipes: {num_recipes}</p>
+                <p className='text-xl text-center font-medium'>Total Recipes: {num_recipes}</p>
                 <p className='text-xl text-center font-medium'>Likes: {likes}</p>
                 <div className="card-actions justify-center mt-6">
-                    <button className="btn btn-primary">View Recipes</button>
+                    <button onClick={() => handleViewRecipes(chef.id)} className="btn btn-primary">View Recipes</button>
                 </div>
             </div>
         </div>
