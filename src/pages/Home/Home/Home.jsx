@@ -1,6 +1,8 @@
 import React from 'react';
 import './Home.css'
 import ChefSection from '../ChefsSection/ChefSection';
+import FirstSection from '../FirstSection/FirstSection';
+import SecondSection from './../SecondSection/SecondSection';
 
 const Home = () => {
 
@@ -15,6 +17,8 @@ const Home = () => {
             </section>
             <div className=''>
                 <ChefSection></ChefSection>
+                <FirstSection></FirstSection>
+                <SecondSection></SecondSection>
             </div>
         </>
     );

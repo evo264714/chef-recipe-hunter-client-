@@ -9,12 +9,14 @@ import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import Recipe from "../pages/Recipe/Recipe";
 import PrivateRoute from "./PrivateRoute";
+import NotFoundPage from "../pages/Shared/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
    
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',
@@ -37,7 +39,8 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
+            },
+           
            
             
         ]
