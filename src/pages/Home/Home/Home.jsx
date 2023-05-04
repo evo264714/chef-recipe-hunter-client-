@@ -7,7 +7,7 @@ import SecondSection from './../SecondSection/SecondSection';
 const Home = () => {
 
     return (
-        <>
+        <div className=''>
             <section className="banner">
                 <div className="banner-text">
                     <h1 className='text-black font-bold'>Welcome to Chefs Table</h1>
@@ -20,7 +20,7 @@ const Home = () => {
                 <FirstSection></FirstSection>
                 <SecondSection></SecondSection>
             </div>
-        </>
+        </div>
     );
 };
 

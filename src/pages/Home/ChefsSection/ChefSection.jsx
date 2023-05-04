@@ -12,10 +12,10 @@ const ChefSection = () => {
     }, [])
 
     return (
-        <div>
+        <div className=''>
            
            <h2 className='py-6 text-center text-black text-4xl font-bold bg-slate-400'>Check out some of our world class chef's recipes.</h2>
-            <div className='grid md:grid-cols-2 lg:grid-cols-2 bg-slate-400'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-2 bg-slate-400 sm:w-full'>
                 
                 {
                     chefs.map(chef => <Chef

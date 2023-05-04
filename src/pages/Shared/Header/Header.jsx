@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
-import { FaUserCircle } from "react-icons/fa";
-
 const Header = () => {
     const headerStyle = {
         background: 'linear-gradient(to right, #2c3e50, #1a1a1a)',
@@ -18,7 +16,7 @@ const Header = () => {
     }
 
     return (
-        <div className='w-full flex items-center justify-around p-6' style={headerStyle}>
+        <div className='sm:w-full w-full md:flex items-center justify-around p-6' style={headerStyle}>
             <h2 className='text-7xl font-bold text-white'>Chefs Table</h2>
 
             <nav>
@@ -55,7 +53,7 @@ const Header = () => {
                 
             </nav>
             <div className='flex w-36 justify-between items-center'>
-                {user && <Link> <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Link>}
+                {user && <img className='w-10 rounded-full' src={user.photoURL} />}
 
                 {user ?
 
