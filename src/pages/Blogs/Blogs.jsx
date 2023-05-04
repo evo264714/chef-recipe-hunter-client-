@@ -5,7 +5,7 @@ const Blogs = () => {
     return (
 
         <div className='text-white p-10' style={{ background: 'linear-gradient(to right,#7da5aa,#385253)' }}>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mb-6'>
                 <button className='btn btn-info'><FaFilePdf className='me-2' />Download PDF</button>
             </div>
             <h2 className='text-2xl font-bold'>1. Differences between uncontrolled and controlled component?</h2>
