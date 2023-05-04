@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 import { FaUserCircle } from "react-icons/fa";
@@ -22,9 +22,37 @@ const Header = () => {
             <h2 className='text-7xl font-bold text-white'>Chefs Table</h2>
 
             <nav>
-                <Link className='text-white	font-medium mr-5' to="/">Home</Link>
-                <Link className='text-white	font-medium mr-5' to="/blogs">Blog</Link>
-                <Link className='text-white	font-medium mr-5' to="/">About</Link>
+                <NavLink className='me-6'
+                    to="/"
+                    style={({ isActive }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Home
+                </NavLink>
+                <NavLink className='me-6'
+                    to="/blogs"
+                    style={({ isActive }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Blogs
+                </NavLink>
+                <NavLink className='me-6'
+                    to="/register"
+                    style={({ isActive }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Register
+                </NavLink>
+                
             </nav>
             <div className='flex w-36 justify-between items-center'>
                 {user && <Link> <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Link>}

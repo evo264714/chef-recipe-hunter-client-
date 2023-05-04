@@ -1,13 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
     const handleRegister = event =>{
         event.preventDefault();
+        setSuccess('')
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
@@ -18,10 +21,13 @@ const Register = () => {
         .then(result =>{
             const createdUser = result.user;
             console.log(createdUser);
-
+            setError('')
+            form.reset();
+            setSuccess('Successfully Registered');
         })
         .catch(error =>{
-            console.log(error);
+            setError(error.message);
+            
         })
     }
 
@@ -51,23 +57,24 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" name='email' className="input input-bordered" />
+                                <input type="email" placeholder="email" name='email' required className="input input-bordered" />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" name='password' className="input input-bordered" />
+                                <input type="password" placeholder="password" name='password' required className="input input-bordered" />
                                 <label>
-                                    <span className='text-red-500'></span>
+                                    <span className='text-red-500'>{error}</span>
+                                    <span className='text-green-500'>{success}</span>
                                 </label>
                                 <label className="label">
                                     <span>Already Have an Account? Please <Link to='/login' className="underline decoration-solid">Login</Link></span>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn btn-accent">Register</button>
                             </div>
                         </div>
                     </div>
