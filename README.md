@@ -4,4 +4,4 @@
 4. Users can not read the recipes without making an account on this website.
 5. Users will be able to mark the recipes as favourites in the details page.
 
-Live Link: 
+Live Link: https://chefs-table-4986c.web.app/
