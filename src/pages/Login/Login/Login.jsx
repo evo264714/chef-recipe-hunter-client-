@@ -18,6 +18,7 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
         .then(result=>{
             const user = result.user
+            navigate(from, {replace: true})
         })
         .catch(error =>{
             console.log(error);
@@ -27,6 +28,7 @@ const Login = () => {
         signInWithPopup(auth, gitHubProvider)
         .then(result =>{
             const loggedInUser = result.loggedInUser;
+            navigate(from, {replace: true})
         })
         .catch(error =>{
             console.log(error);

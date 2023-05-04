@@ -53,7 +53,7 @@ const Header = () => {
                 
             </nav>
             <div className='flex w-36 justify-between items-center'>
-                {user && <img className='w-10 rounded-full' src={user.photoURL} />}
+                {user && <img className='w-10 rounded-full' title={user.displayName} src={user.photoURL} />}
 
                 {user ?
 
